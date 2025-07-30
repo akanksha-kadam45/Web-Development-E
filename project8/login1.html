@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="col-md-3 mt-5 shadow-lg mx-auto p-3">
+        <h3 class="text-center p-3">Login Here....</h3>
+        <input type="email" name="email" required placeholder="Enter Email" class="form-control">
+        <input type="password" name="pwd" required class="form-control mt-3 mb-3" placeholder="password" id="pwd">
+        <img src="images/close.png" alt="close" width="30" id="img" onclick="showhidepwd()">
+        <div class="text-center mt-3">
+        <input type="submit" value="login">
+        </div>
+    </div>
+     
+    <script>
+        let x=document.getElementById('pwd');
+        function showhidepwd()
+        {
+            if(x.type == "password")
+        {
+            x.type="text";
+            document.getElementById('img').src="images/open.png";
+        }
+        else
+        {
+            x.type="password";
+            document.getElementById('img').src="images/close.png";
+
+        }
+        }
+    </script>
+</body>
+</html>
